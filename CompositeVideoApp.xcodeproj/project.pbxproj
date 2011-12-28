@@ -17,6 +17,10 @@
 		57A323FC14AADA0500CCDE26 /* CVAFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A323FB14AADA0500CCDE26 /* CVAFlipsideViewController.m */; };
 		57A323FF14AADA0500CCDE26 /* CVAMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57A323FD14AADA0500CCDE26 /* CVAMainViewController.xib */; };
 		57A3240214AADA0500CCDE26 /* CVAFlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57A3240014AADA0500CCDE26 /* CVAFlipsideViewController.xib */; };
+		57A3240A14AADA5700CCDE26 /* AVManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A3240914AADA5700CCDE26 /* AVManager.m */; };
+		57A3240C14AADBCD00CCDE26 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3240B14AADBCD00CCDE26 /* AVFoundation.framework */; };
+		57A3240E14AADFE800CCDE26 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3240D14AADFE800CCDE26 /* CoreMedia.framework */; };
+		57A3241014AAE01300CCDE26 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3240F14AAE01300CCDE26 /* CoreVideo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,18 +28,23 @@
 		57A323E514AADA0500CCDE26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57A323E714AADA0500CCDE26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		57A323E914AADA0500CCDE26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		57A323ED14AADA0500CCDE26 /* CompositeVideoApp-Info.plist */ = {isa = PBXFileReference; path = "CompositeVideoApp-Info.plist"; sourceTree = "<group>"; };
+		57A323ED14AADA0500CCDE26 /* CompositeVideoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CompositeVideoApp-Info.plist"; sourceTree = "<group>"; };
 		57A323EF14AADA0500CCDE26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		57A323F114AADA0500CCDE26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		57A323F314AADA0500CCDE26 /* CompositeVideoApp-Prefix.pch */ = {isa = PBXFileReference; path = "CompositeVideoApp-Prefix.pch"; sourceTree = "<group>"; };
-		57A323F414AADA0500CCDE26 /* CVAAppDelegate.h */ = {isa = PBXFileReference; path = CVAAppDelegate.h; sourceTree = "<group>"; };
+		57A323F314AADA0500CCDE26 /* CompositeVideoApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CompositeVideoApp-Prefix.pch"; sourceTree = "<group>"; };
+		57A323F414AADA0500CCDE26 /* CVAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVAAppDelegate.h; sourceTree = "<group>"; };
 		57A323F514AADA0500CCDE26 /* CVAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVAAppDelegate.m; sourceTree = "<group>"; };
-		57A323F714AADA0500CCDE26 /* CVAMainViewController.h */ = {isa = PBXFileReference; path = CVAMainViewController.h; sourceTree = "<group>"; };
+		57A323F714AADA0500CCDE26 /* CVAMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVAMainViewController.h; sourceTree = "<group>"; };
 		57A323F814AADA0500CCDE26 /* CVAMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVAMainViewController.m; sourceTree = "<group>"; };
-		57A323FA14AADA0500CCDE26 /* CVAFlipsideViewController.h */ = {isa = PBXFileReference; path = CVAFlipsideViewController.h; sourceTree = "<group>"; };
+		57A323FA14AADA0500CCDE26 /* CVAFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVAFlipsideViewController.h; sourceTree = "<group>"; };
 		57A323FB14AADA0500CCDE26 /* CVAFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVAFlipsideViewController.m; sourceTree = "<group>"; };
 		57A323FE14AADA0500CCDE26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CVAMainViewController.xib; sourceTree = "<group>"; };
 		57A3240114AADA0500CCDE26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CVAFlipsideViewController.xib; sourceTree = "<group>"; };
+		57A3240814AADA5700CCDE26 /* AVManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVManager.h; sourceTree = "<group>"; };
+		57A3240914AADA5700CCDE26 /* AVManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVManager.m; sourceTree = "<group>"; };
+		57A3240B14AADBCD00CCDE26 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		57A3240D14AADFE800CCDE26 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		57A3240F14AAE01300CCDE26 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A3241014AAE01300CCDE26 /* CoreVideo.framework in Frameworks */,
+				57A3240E14AADFE800CCDE26 /* CoreMedia.framework in Frameworks */,
+				57A3240C14AADBCD00CCDE26 /* AVFoundation.framework in Frameworks */,
 				57A323E614AADA0500CCDE26 /* UIKit.framework in Frameworks */,
 				57A323E814AADA0500CCDE26 /* Foundation.framework in Frameworks */,
 				57A323EA14AADA0500CCDE26 /* CoreGraphics.framework in Frameworks */,
@@ -55,6 +67,9 @@
 		57A323D614AADA0400CCDE26 = {
 			isa = PBXGroup;
 			children = (
+				57A3240F14AAE01300CCDE26 /* CoreVideo.framework */,
+				57A3240D14AADFE800CCDE26 /* CoreMedia.framework */,
+				57A3240B14AADBCD00CCDE26 /* AVFoundation.framework */,
 				57A323EB14AADA0500CCDE26 /* CompositeVideoApp */,
 				57A323E414AADA0500CCDE26 /* Frameworks */,
 				57A323E214AADA0500CCDE26 /* Products */,
@@ -91,6 +106,8 @@
 				57A323FD14AADA0500CCDE26 /* CVAMainViewController.xib */,
 				57A3240014AADA0500CCDE26 /* CVAFlipsideViewController.xib */,
 				57A323EC14AADA0500CCDE26 /* Supporting Files */,
+				57A3240814AADA5700CCDE26 /* AVManager.h */,
+				57A3240914AADA5700CCDE26 /* AVManager.m */,
 			);
 			path = CompositeVideoApp;
 			sourceTree = "<group>";
@@ -173,6 +190,7 @@
 				57A323F614AADA0500CCDE26 /* CVAAppDelegate.m in Sources */,
 				57A323F914AADA0500CCDE26 /* CVAMainViewController.m in Sources */,
 				57A323FC14AADA0500CCDE26 /* CVAFlipsideViewController.m in Sources */,
+				57A3240A14AADA5700CCDE26 /* AVManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
