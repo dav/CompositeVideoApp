@@ -67,9 +67,6 @@
 		57A323D614AADA0400CCDE26 = {
 			isa = PBXGroup;
 			children = (
-				57A3240F14AAE01300CCDE26 /* CoreVideo.framework */,
-				57A3240D14AADFE800CCDE26 /* CoreMedia.framework */,
-				57A3240B14AADBCD00CCDE26 /* AVFoundation.framework */,
 				57A323EB14AADA0500CCDE26 /* CompositeVideoApp */,
 				57A323E414AADA0500CCDE26 /* Frameworks */,
 				57A323E214AADA0500CCDE26 /* Products */,
@@ -87,6 +84,9 @@
 		57A323E414AADA0500CCDE26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57A3240F14AAE01300CCDE26 /* CoreVideo.framework */,
+				57A3240D14AADFE800CCDE26 /* CoreMedia.framework */,
+				57A3240B14AADBCD00CCDE26 /* AVFoundation.framework */,
 				57A323E514AADA0500CCDE26 /* UIKit.framework */,
 				57A323E714AADA0500CCDE26 /* Foundation.framework */,
 				57A323E914AADA0500CCDE26 /* CoreGraphics.framework */,
@@ -308,6 +308,7 @@
 				57A3240714AADA0500CCDE26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
