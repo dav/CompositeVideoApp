@@ -8,7 +8,13 @@
 
 #import "CVAFlipsideViewController.h"
 
-@interface CVAMainViewController : UIViewController <CVAFlipsideViewControllerDelegate>
+@class AVManager;
+
+@interface CVAMainViewController : UIViewController <CVAFlipsideViewControllerDelegate> {
+  UIImageView* _mainImageView;
+  UIButton* _button;
+  AVManager* _avManager;
+}
 
 - (IBAction)showInfo:(id)sender;
 

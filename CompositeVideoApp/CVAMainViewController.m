@@ -7,6 +7,7 @@
 //
 
 #import "CVAMainViewController.h"
+#import "AVManager.h"
 
 @implementation CVAMainViewController
 
@@ -21,15 +22,26 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+  [super viewDidLoad];
+  _mainImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 300, 380)];
+  _mainImageView.backgroundColor = [UIColor redColor];
+  [self.view addSubview:_mainImageView];
+
+  _avManager = [[AVManager alloc] initWithViewForPreview:_mainImageView];
+
+  _button = [[UIButton alloc] initWithFrame:CGRectMake(60, 400, 200, 44)];
+  [_button setTitle:@"Toggle" forState:UIControlStateNormal];
+  [_button addTarget:_avManager action:@selector(toggleRecording) forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:_button];
+  
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+- (void)viewDidUnload {
+  [super viewDidUnload];
+  [_mainImageView release];
+  _mainImageView = nil;
+  [_avManager release];
+  _avManager = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated

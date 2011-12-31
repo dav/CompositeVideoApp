@@ -20,4 +20,7 @@
 @property (nonatomic, retain) AVAssetWriterInput* assetWriterInput;
 @property (nonatomic) CMTime recordStartTime;
 
+- (id) initWithViewForPreview:(UIImageView*)aView;
+- (void) toggleRecording;
+
 @end
