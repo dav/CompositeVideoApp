@@ -52,6 +52,7 @@
     [self.captureSession addOutput:outputData];
     
     isRecording = NO;
+    self.recordStartTime = kCMTimeZero;
   }
   return self;
 }
@@ -61,7 +62,7 @@
   if (isRecording) {
     NSLog(@"Stopping recording");
     [self.assetWriterInput markAsFinished];
-    [self.assetWriter endSessionAtSourceTime:recordStartTime];
+    [self.assetWriter endSessionAtSourceTime:self.recordStartTime];
     [self.assetWriter finishWriting];
     NSLog(@"Export done");
   } else {
@@ -73,6 +74,7 @@
     }
     
     NSError *error = nil;
+    NSLog(@"Setting output path: %@", outputPath);
     self.assetWriter = [AVAssetWriter assetWriterWithURL:outputPath fileType:AVFileTypeQuickTimeMovie  error:&error];
     if (error != nil) {
       NSLog(@"Creation of assetWriter resulting in a non-nil error");
@@ -96,7 +98,7 @@
 
     // START
     [self.assetWriter startWriting];
-    [self.assetWriter startSessionAtSourceTime:recordStartTime];
+    [self.assetWriter startSessionAtSourceTime:self.recordStartTime];
   }
   
   isRecording = !isRecording;
@@ -107,6 +109,7 @@
 
 // Finally we have a callback that we can use to get each frame as it becomes available
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
+  NSLog(@"captureOutput");
   if (!CMSampleBufferDataIsReady(sampleBuffer)) {
     NSLog(@"sampleBuffer data is not ready");
   }
